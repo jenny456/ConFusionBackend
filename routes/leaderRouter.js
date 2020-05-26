@@ -22,7 +22,7 @@ leaderRouter.route('/')
 .post(cors.corsWithOptions ,authenticate.verifyUser,authenticate.verifyAdmin,(req, res, next) => {
     Leaders.create(req.body)
     .then((dish) => {
-        console.log('Dish Created ', dish);
+        console.log('leader Created ', dish);
         res.statusCode = 200;
         res.setHeader('Content-Type', 'application/json');
         res.json(dish);
